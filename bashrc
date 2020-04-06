@@ -131,13 +131,16 @@ else
 fi
 unset __conda_setup
 # <<< conda init <<<
-
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:   /usr/local/games:/usr/local/go/bin:/snap/bin"
 export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 
-alias dgraph-repo='cd ~/go/src/github.com/dgraph-io/dgraph'
-alias dgraph-make='cd ~/go/src/github.com/dgraph-io/dgraph && make install'
+
+alias d='cd ~/go/src/github.com/dgraph-io/dgraph'
+alias d-make='cd ~/go/src/github.com/dgraph-io/dgraph && make install'
+alias ratel-build='cd ~/go/src/github.com/dgraph-io/ratel/ && scripts/build.prod.sh'
+alias ratel-run='./build/ratel'
+
 alias dgraph='~/go/bin/dgraph'
-alias dgraph-run-alpha='~/go/bin/dgraph alpha'
+
 
 
