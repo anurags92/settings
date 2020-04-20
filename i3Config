@@ -96,7 +96,7 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 set $ws1 "1: Terminal &#xf121;"
-set $ws2 "2: Code &#xf126;"
+set $ws2 "2: Code"
 set $ws3 "3: Firefox &#xf269;"
 set $ws5 "5: Spotify &#xf1bc;"
 set $ws6 "6: Slack"
