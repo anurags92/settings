@@ -96,14 +96,15 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 set $ws1 "1: Terminal &#xf121;"
-set $ws2 "2: Firefox &#xf269;"
+set $ws2 "2: Code &#xf126;"
+set $ws3 "3: Firefox &#xf269;"
 set $ws5 "5: Spotify &#xf1bc;"
 set $ws6 "6: Slack"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
-bindsym $mod+3 workspace 3
+bindsym $mod+3 workspace $ws3
 bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
@@ -115,7 +116,7 @@ bindsym $mod+0 workspace 10
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
-bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+3 move container to workspace $ws3
 bindsym $mod+Shift+4 move container to workspace 4
 bindsym $mod+Shift+5 move container to workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6
@@ -124,7 +125,7 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
-assign [class="Firefox"] $ws2
+assign [class="Firefox"] $ws3
 assign [class="Slack"] $ws6
 #Spotify is an exception here.
 for_window [class="Spotify"] move to workspace $ws5
