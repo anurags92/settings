@@ -140,18 +140,32 @@ fi
 
 
 export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:/usr/local/go/bin
+export JEPSEN_ROOT=$HOME/Programs/jepsen
+#export JAVA_HOME=$HOME/.jdks/openjdk-16.0.1
 
 
-alias d='cd ~/go/src/github.com/dgraph-io/dgraph'
-alias d-make='cd ~/go/src/github.com/dgraph-io/dgraph && make install'
+
+alias e='cd ~/diffbot/enhanceapi'
+alias t='cd ~/diffbot/Thoth'
+alias ddb='cd ~/TestDB'
+alias ddata='cd ~/TestData'
+alias d-make='cd ~/go/src/github.com/dgraph-io/dgraph && make install && cd -'
 alias ratel-build='cd ~/go/src/github.com/dgraph-io/ratel/ && scripts/build.prod.sh'
 alias ratel-run='./build/ratel'
 
 alias dgraph='~/go/bin/dgraph'
 
-alias gco='git checkout'
+alias dr='d-make && ddb && dgraph zero'
 
+alias mk='microk8s kubectl'
+
+alias rinj='cd /opt/jetbrains-toolbox-1.20.8352 && ./jetbrains-toolbox'
+
+alias ssh-ed='ssh-add ~/.ssh/id_ed25519'
+
+alias log-diff='ssh -A anurag@login.diffbot.com'
 
 # HSTR configuration - add this to ~/.bashrc
 alias hh=hstr                    # hh to be alias for hstr
@@ -167,3 +181,11 @@ if [[ $- =~ .*i.* ]]; then bind '"\C-r": "\C-a hstr -- \C-j"'; fi
 # if this is interactive shell, then bind 'kill last command' to Ctrl-x k
 if [[ $- =~ .*i.* ]]; then bind '"\C-xk": "\C-a hstr -k \C-j"'; fi
 
+#eval "$(starship init bash)"
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/alvis/google-cloud-sdk/path.bash.inc' ]; then . '/home/alvis/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/alvis/google-cloud-sdk/completion.bash.inc' ]; then . '/home/alvis/google-cloud-sdk/completion.bash.inc'; fi

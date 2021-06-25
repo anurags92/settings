@@ -1,0 +1,35 @@
+[user]
+	name = Anurag Sharma
+	email = anurags92@gmail.com
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+
+[diff]
+    guitool = kdiff3
+[difftool]
+    prompt = false
+
+[merge]
+	tool = kdiff3
+
+[mergetool "kdiff3"]
+	path = /usr/bin/kdiff3
+	trustExitCode = false
+[difftool "kdiff3"]
+	path = /usr/bin/kdiff3
+	trustExitCode = false
+[filesystem "Azul Systems, Inc.|15.0.3|/dev/sda2"]
+	timestampResolution = 16008 nanoseconds
+	minRacyThreshold = 5770 microseconds
+[filesystem "Oracle Corporation|16.0.1|/dev/sda2"]
+	timestampResolution = 5360 nanoseconds
+	minRacyThreshold = 6035 microseconds
+[filesystem "Private Build|1.8.0_292|/dev/sda2"]
+	timestampResolution = 1001 microseconds
+	minRacyThreshold = 6773 microseconds
+[filesystem "Ubuntu|11.0.11|/dev/sda2"]
+	timestampResolution = 5000 nanoseconds
+	minRacyThreshold = 6867 microseconds
